@@ -14,6 +14,7 @@ QUOTES = [
     {"quote": "Whether you think you can or you think you can't, you're right.", "author": "Henry Ford"},
     {"quote": "The best time to plant a tree was 20 years ago. The second best time is now.", "author": "Chinese Proverb"},
     {"quote": "An unexamined life is not worth living.", "author": "Socrates"},
+    {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson"},
 ]
 
 
