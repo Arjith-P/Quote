@@ -27,3 +27,4 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/quoteapi:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/quoteapi:${{ github.sha }}
+}
