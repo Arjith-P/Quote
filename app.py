@@ -33,7 +33,7 @@ def health_check():
     return jsonify({
         "status": "ok",
         "service": "quoteapi",
-        "version": "0.1.0"
+        "version": "0.2.0"
     }), 200
 
 
