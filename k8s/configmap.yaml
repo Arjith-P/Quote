@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: quoteapi-config
+data:
+  FLASK_ENV: "production"
+  APP_VERSION: "0.1.0"

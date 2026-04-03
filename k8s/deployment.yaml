@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quoteapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: quoteapi
+  template:
+    metadata:
+      labels:
+        app: quoteapi
+    spec:
+      containers:
+        - name: quoteapi
+          image: arjith2222/quoteapi:latest
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: quoteapi-config
+            - secretRef:
+                name: quoteapi-secret
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5
