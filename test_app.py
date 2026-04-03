@@ -13,7 +13,7 @@ def test_quote_endpoint(client):
     data = response.get_json()
     assert "quote" in data
     assert "author" in data
-    assert data["status"] == "wrong_value"
+    assert data["status"] == "success"
 
 def test_health_endpoint(client):
     response = client.get("/health")
